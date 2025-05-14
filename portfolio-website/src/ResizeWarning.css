@@ -1,0 +1,25 @@
+.resize-warning-glass {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3);
+    animation: blink 1.5s infinite;
+    text-align: center;
+  }
+  
+  /* Blinking animation */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  

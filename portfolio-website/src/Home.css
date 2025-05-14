@@ -1,0 +1,306 @@
+
+/* Section Wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background: transparent; 
+  padding-top: 10rem;
+  
+  
+}
+
+.home-container-modern {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+  
+}
+/* Layout Grid */
+.home-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  margin-left: 3rem;
+}
+
+/* Left Text Content */
+.home-content-modern {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.home-content-modern h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color:#c0c0c0;
+  text-shadow:
+  0 2px 4px rgba(0, 0, 0, 0.6),     /* Depth shadow */
+  0 0 6px rgba(255, 255, 255, 0.2); /* Soft outer glow */
+  margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-content-modern h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   
+}
+
+.highlighted-word {
+  background: linear-gradient(270deg, #00e0ff, #00ff99, #00e0ff);
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+
+
+
+.home-content-modern p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   
+}
+
+.resume-btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 27px;
+  
+}
+
+
+
+/* Orbit Section */
+.orbit-container-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 300px;
+  margin-top: 2rem;
+}
+
+.orbit-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+
+/* Orbit Rings */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  border: 1px dashed var(--primary-light);
+  border-radius: 50%;
+  animation: rotateOrbit 17s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-ring {
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+  animation-duration: 25s;
+}
+
+/* Orbit Rotation */
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Tech Logos on Orbits */
+.tech-logo {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* Position Logos Equally on Orbit */
+.orbit .tech-logo:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.orbit .tech-logo:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.orbit .tech-logo:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%);
+}
+
+.orbit .tech-logo:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+/* Center Profile Image */
+.center-profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 170px;
+  height: 170px;
+}
+
+.center-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(139, 173, 172, 0.3); /* Subtle shadow */
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .orbit-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orbit {
+    width: 180px;
+    height: 180px;
+    margin-left: -90px;
+    margin-top: -90px;
+  }
+
+  .second-ring {
+    width: 220px;
+    height: 220px;
+    margin-left: -110px;
+    margin-top: -110px;
+  }
+
+  .center-profile {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tech-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+  .home-content-modern h1 {
+    font-size: 2rem;
+  }
+
+  .home-content-modern h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-content-modern p {
+    font-size: 0.95rem;
+  }
+
+  .resume-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .home-content-modern h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .home-content-modern h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .home-content-modern p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .resume-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .orbit-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .orbit {
+    width: 140px;
+    height: 140px;
+    margin-left: -70px;
+    margin-top: -70px;
+  }
+
+  .second-ring {
+    width: 170px;
+    height: 170px;
+    margin-left: -85px;
+    margin-top: -85px;
+  }
+
+  .center-profile {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tech-logo {
+    width: 24px;
+    height: 24px;
+  }
+}
+

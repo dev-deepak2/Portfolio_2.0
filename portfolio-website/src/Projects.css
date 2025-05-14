@@ -1,0 +1,180 @@
+.projects-section {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 25px;
+   
+
+
+    backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .project-card-wrapper {
+    background-color: rgba(205, 198, 198, 0.437);
+    padding: 0.7rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    z-index: 1; 
+  }
+  
+  
+  
+  
+
+  .projects-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    
+    /* Gradient Morphism Background */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Morphism Shadows */
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2); /* Inner glow for depth */
+    
+    /* Text Shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    
+    transition: all 0.3s ease;
+  }
+  
+  .projects-title:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.2),
+      inset 0 1px 3px rgba(255, 255, 255, 0.3); /* Enhanced inner shine */
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 25rem;
+    height: 18rem;
+    position: relative;
+  }
+  
+  
+  
+  
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    text-align: left;
+  }
+  
+  .project-info h2 {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #c0c0c0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.2rem;
+  }
+  
+  .project-info p {
+    font-size: 0.65rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .github-link {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: #fffefe;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .github-link:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+
+  }
+  
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .project-card {
+      height: auto;
+    }
+  
+    .projects-title {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .projects-grid {
+      gap: 2rem;
+    }
+    .project-card-wrapper {
+      padding: 0.5rem;
+      width: auto;
+    }
+  }
+  @media (max-width: 574px) {
+    .projects-grid {
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 1.5rem;
+    }
+  
+    .project-card {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .project-info h2 {
+      font-size: 0.95rem;
+    }
+  
+    .project-info p {
+      font-size: 0.75rem;
+    }
+  }
+  /*-----------------------------------------------*/
+
+  
+  
